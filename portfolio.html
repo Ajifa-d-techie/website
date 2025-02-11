@@ -1338,28 +1338,6 @@
             right: -25px;
         }
 
-        /* Contact Section Styles */
-        @media (max-width: 430px) {
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info,
-            .contact-form {
-                width: 100%;
-                padding: var(--spacing-md);
-            }
-
-            .contact-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-card .contact-icon {
-                margin-bottom: var(--spacing-sm);
-            }
-        }
-
         .contact {
             position: relative;
             overflow: hidden;
@@ -1447,7 +1425,7 @@
         }
 
         .contact-form {
-
+            /* width: 100%; */
             background: var(--card-bg);
             padding: var(--spacing-xl);
             border-radius: var(--radius-lg);
@@ -1466,7 +1444,6 @@
             width: 100%;
             padding: 1rem 0;
             background: transparent;
-
             border: none;
             color: var(--text-primary);
             font-size: 1rem;
@@ -1484,7 +1461,6 @@
         .input-line {
             position: absolute;
             bottom: 0;
-
             left: 0;
             width: 100%;
             height: 2px;
@@ -1590,6 +1566,28 @@
 
             .contact-card {
                 padding: 16px;
+            }
+        }
+
+        /* Contact Section Styles */
+        @media (max-width: 430px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .contact-form {
+                /* width: 300px; */
+                padding: 40px;
+            }
+
+            .contact-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-card .contact-icon {
+                margin-bottom: var(--spacing-sm);
             }
         }
 
@@ -1862,7 +1860,10 @@
         /* Responsive Styles */
         @media (max-width: 992px) {
             .contact-wrapper {
+                display: grid;
+                width: 100%;
                 grid-template-columns: 1fr;
+                place-content: center;
             }
 
             .footer-content {
@@ -2563,7 +2564,7 @@
 
                     <div class="form-group">
                         <div class="input-wrapper">
-                            <textarea id="message" class="form-input" required></textarea>
+                            <textarea id="message" draggable="false" class="form-input" required></textarea>
                             <label for="message" class="form-label">Your Message</label>
                             <div class="input-line"></div>
                         </div>
